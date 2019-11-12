@@ -1,6 +1,14 @@
 <?php
-   if( $_POST["data"] ){
-      $name = $_POST['data'];
-      echo "Welcome ". $name;
-   }
+
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type: application/json');
+
+   <?php
+if( $_REQUEST["name"] ) {
+
+   $name = $_REQUEST['name'];
+   echo "Welcome ". $name;
+}
+
+?>
 ?>
