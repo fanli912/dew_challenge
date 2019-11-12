@@ -1,6 +1,6 @@
 <?php
-   if( $_REQUEST["data"] ){
-      $name = $_REQUEST['data'];
+   if( $_POST["data"] ){
+      $name = $_POST['data'];
       echo "Welcome ". $name;
    }
 ?>

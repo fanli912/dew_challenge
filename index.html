@@ -16,7 +16,6 @@
     
   ></script>
 
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -100,7 +99,16 @@ var id = $this.attr('id');
 });
 
     	console.log(dataArray)
-    	$('.pane').load('result.php', {'data':dataArray});
+    	
+    	$.ajax({
+      type:"POST",
+      url: "result",
+      data:{data: dataArray},
+      success: function(data){
+        alert(data);
+      }
+    });
+    document.getElementById('humanText').value = "";
     }
 
     function checkColor(color) {
